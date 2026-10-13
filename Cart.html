@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shopping Cart | Umair Furniture</title>
+
+  <link rel="stylesheet" href="./CSS/Cart.css">
+  <script src="./cart.js" defer></script>
+</head>
+
+<body>
+
+  <header class="Cart-Header">
+    <a href="./Main_Work.html" class="Brand">Umair Furniture</a>
+    <a href="./Main_Work.html" class="Continue-Link">
+      Continue Shopping
+    </a>
+  </header>
+
+  <main class="Cart-Container">
+
+    <h1>Shopping Cart</h1>
+    <p class="Subtitle">Review your selected furniture before checkout.</p>
+
+    <div class="Cart-Layout">
+
+      <section class="Cart-Items-Section">
+        <div id="Cart-Message" role="status"></div>
+        <div id="Cart-Items"></div>
+      </section>
+
+      <aside class="Order-Summary">
+        <h2>Order Summary</h2>
+
+        <div class="Summary-Row">
+          <span>Total Items</span>
+          <span id="Total-Items">0</span>
+        </div>
+
+        <div class="Summary-Row">
+          <span>Subtotal</span>
+          <span id="Subtotal">Rs. 0</span>
+        </div>
+
+        <div class="Summary-Row">
+          <span>Delivery</span>
+          <span id="Delivery">Calculated at checkout</span>
+        </div>
+
+        <hr>
+
+        <div class="Summary-Row Grand-Total">
+          <span>Total</span>
+          <span id="Grand-Total">Rs. 0</span>
+        </div>
+
+        <button id="Checkout-Button" type="button">
+          Proceed to Checkout
+        </button>
+
+        <button id="Clear-Cart" class="Clear-Button" type="button">
+          Clear Cart
+        </button>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="Cart-Footer">
+    <p>© 2026 Umair Furniture. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

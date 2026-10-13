@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up | Umair Furniture</title>
+  <link rel="stylesheet" href="./Css/Login.css">
+  <script src="./Login.js" defer></script>
+</head>
+<body>
+
+  <header class="auth-header">
+    <a href="./Main_Work.html" class="brand">
+      <img src="./Images/Umair_Logo2.png" alt="Umair Furniture">
+    </a>
+    <a href="./Main_Work.html" class="back-link">← Back to Store</a>
+  </header>
+
+  <main class="auth-container">
+    <section class="auth-card">
+      <div class="auth-heading">
+        <span class="eyebrow">WELCOME TO</span>
+        <h1>Umair Furniture</h1>
+        <p>Sign in or create an account to continue.</p>
+      </div>
+
+      <div class="auth-tabs">
+        <button type="button" id="Login-Tab" class="auth-tab active">
+          Login
+        </button>
+        <button type="button" id="Register-Tab" class="auth-tab">
+          Sign Up
+        </button>
+      </div>
+
+      <p id="Auth-Message" class="auth-message" role="status" aria-live="polite"></p>
+
+      <!-- LOGIN FORM -->
+      <form id="Login-Form">
+        <div class="form-group">
+          <label for="Login-Email">Email Address</label>
+          <input
+            type="email"
+            id="Login-Email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="Login-Password">Password</label>
+          <input
+            type="password"
+            id="Login-Password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            minlength="8"
+            required
+          >
+        </div>
+
+        <button type="submit" class="submit-btn" id="Login-Button">
+          Login to Account
+        </button>
+
+        <p class="switch-text">
+          Don't have an account?
+          <button type="button" class="text-btn" id="Go-To-Signup">
+            Sign Up
+          </button>
+        </p>
+      </form>
+
+      <!-- REGISTRATION FORM -->
+      <form id="Register-Form" hidden>
+        <div class="form-group">
+          <label for="Register-Name">Full Name</label>
+          <input
+            type="text"
+            id="Register-Name"
+            name="name"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            minlength="2"
+            maxlength="100"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="Register-Email">Email Address</label>
+          <input
+            type="email"
+            id="Register-Email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="Register-Password">Password</label>
+          <input
+            type="password"
+            id="Register-Password"
+            name="password"
+            placeholder="Create a password (8 characters minimum)"
+            autocomplete="new-password"
+            minlength="8"
+            maxlength="72"
+            required
+          >
+        </div>
+
+        <button type="submit" class="submit-btn" id="Register-Button">
+          Create Account
+        </button>
+
+        <p class="switch-text">
+          Already have an account?
+          <button type="button" class="text-btn" id="Go-To-Login">
+            Login
+          </button>
+        </p>
+      </form>
+
+      <p class="secure-note">
+        Your account information is handled by our secure backend.
+      </p>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    Umair Furniture · Lahori Bazaar, Faqirwali
+  </footer>
+
+</body>
+</html>

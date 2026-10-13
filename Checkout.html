@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Umair Furniture</title>
+  <link rel="stylesheet" href="./CSS/Checkout.css">
+  <script src="./checkout.js" defer></script>
+</head>
+<body>
+
+  <header class="Checkout-Header">
+    <a href="./Main_Work.html">Umair Furniture</a>
+    <a href="./Cart.html">Back to Cart</a>
+  </header>
+
+  <main class="Checkout-Container">
+    <h1>Checkout</h1>
+    <p class="Intro">Enter your details to place your furniture order.</p>
+
+    <div class="Checkout-Layout">
+      <section class="Checkout-Form-Section">
+        <h2>Delivery Information</h2>
+
+        <form id="Checkout-Form">
+          <label for="customerName">Full Name</label>
+          <input
+            id="customerName"
+            name="name"
+            type="text"
+            minlength="2"
+            maxlength="100"
+            autocomplete="name"
+            required
+          >
+
+          <label for="customerPhone">Phone Number</label>
+          <input
+            id="customerPhone"
+            name="phone"
+            type="tel"
+            minlength="7"
+            maxlength="20"
+            autocomplete="tel"
+            required
+          >
+
+          <label for="customerAddress">Delivery Address</label>
+          <textarea
+            id="customerAddress"
+            name="address"
+            minlength="5"
+            maxlength="300"
+            autocomplete="street-address"
+            rows="4"
+            required
+          ></textarea>
+
+          <p class="Payment-Note">
+            Payment method: Cash on Delivery (COD).
+            Online payment is not enabled.
+          </p>
+
+          <button id="Place-Order" type="submit">
+            Place Order
+          </button>
+
+          <p id="Checkout-Message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <aside class="Checkout-Summary">
+        <h2>Your Order</h2>
+        <div id="Checkout-Items"></div>
+        <hr>
+
+        <div class="Summary-Row">
+          <span>Subtotal</span>
+          <strong id="Checkout-Subtotal">Rs. 0</strong>
+        </div>
+
+        <div class="Summary-Row">
+          <span>Delivery</span>
+          <strong>Free</strong>
+        </div>
+
+        <div class="Summary-Row Total">
+          <span>Total</span>
+          <strong id="Checkout-Total">Rs. 0</strong>
+        </div>
+      </aside>
+    </div>
+
+    <section id="Order-Success" hidden>
+      <h2>Thank you for your order!</h2>
+      <p id="Success-Message"></p>
+      <a href="./Main_Work.html">Continue Shopping</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Umair Furniture</footer>
+
+</body>
+</html>

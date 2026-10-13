@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>All Products | Umair Furniture</title>
+
+  <link rel="stylesheet" href="./CSS/Products.css">
+  <script src="./product-details.js" defer></script>
+</head>
+
+<body>
+
+  <header class="Page-Nav">
+    <a href="./Main_Work.html">
+      <img src="./Images/Umair_Logo2.png" alt="Umair Furniture">
+    </a>
+
+    <nav>
+      <a href="./Main_Work.html">Home</a>
+      <a href="./Main_Work.html#products-section">Products</a>
+      <a href="./Cart.html">My Cart</a>
+    </nav>
+  </header>
+
+  <main class="Product-Details-Page">
+
+    <p class="Breadcrumb">
+      <a href="./Main_Work.html">Home</a> / All Products
+    </p>
+
+    <section class="All-Products-Section">
+      <h1>Our Furniture Collection</h1>
+
+      <p class="Products-Intro">
+        Explore our furniture collection. View product images, prices,
+        categories and detailed descriptions to find the right furniture
+        for your home or office.
+      </p>
+
+      <p id="Details-Message" role="status">
+        Loading products...
+      </p>
+
+      <div id="All-Products-Grid" class="All-Products-Grid"></div>
+    </section>
+
+    <!-- Single product details -->
+    <section id="Single-Product-Details" hidden>
+      <button id="Back-To-Products" type="button">
+        ← Back to All Products
+      </button>
+
+      <div class="Details-Container">
+        <div class="Details-Image-Box">
+          <img id="Details-Image" src="" alt="">
+        </div>
+
+        <div class="Details-Info">
+          <span id="Details-Category" class="Details-Category"></span>
+
+          <h2 id="Details-Name"></h2>
+
+          <p id="Details-Price" class="Details-Price"></p>
+
+          <h3>Product Description</h3>
+
+          <p id="Details-Description" class="Details-Description"></p>
+
+          <div class="Details-Quantity">
+            <label for="Product-Quantity">Quantity:</label>
+
+            <input
+              type="number"
+              id="Product-Quantity"
+              min="1"
+              max="99"
+              value="1"
+            >
+          </div>
+
+          <button id="Details-Add-Cart" type="button">
+            Add to Cart
+          </button>
+
+          <p id="Cart-Message" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="Details-Back">
+      <a href="./Main_Work.html#products-section">
+        ← Continue Shopping
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="Page-Footer">
+    Umair Furniture · Lahori Bazaar, Faqirwali
+  </footer>
+
+</body>
+</html>

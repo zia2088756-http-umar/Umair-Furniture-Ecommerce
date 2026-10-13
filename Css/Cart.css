@@ -1,0 +1,280 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.Cart-Header {
+  background: #111;
+  color: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.Brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.Continue-Link {
+  color: white;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.Continue-Link:hover {
+  background: #333;
+}
+
+.Cart-Container {
+  max-width: 1250px;
+  margin: 40px auto;
+  padding: 0 20px;
+  min-height: 65vh;
+}
+
+.Cart-Container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.Subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.Cart-Layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 25px;
+  align-items: start;
+}
+
+.Cart-Items-Section {
+  min-width: 0;
+}
+
+.Cart-Item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.Cart-Item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.Item-Details h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.Item-Price {
+  color: #d94717;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.Quantity-Controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.Quantity-Controls button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.Quantity-Controls button:hover {
+  background: #e5e5e5;
+}
+
+.Remove-Button {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Item-Subtotal {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.Order-Summary {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.Order-Summary h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.Summary-Row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0;
+  font-size: 14px;
+}
+
+.Summary-Row span:last-child {
+  text-align: right;
+}
+
+.Order-Summary hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.Grand-Total {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+#Checkout-Button,
+.Clear-Button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+#Checkout-Button {
+  background: #d94717;
+  color: white;
+  border: none;
+}
+
+#Checkout-Button:hover {
+  background: #b9360e;
+}
+
+#Checkout-Button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.Clear-Button {
+  background: white;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.Clear-Button:hover {
+  background: #f3f3f3;
+}
+
+.Empty-Cart {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.Empty-Cart p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.Empty-Cart a {
+  color: #d94717;
+  font-weight: bold;
+}
+
+.Cart-Footer {
+  text-align: center;
+  background: #111;
+  color: #ccc;
+  padding: 22px;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .Cart-Layout {
+    grid-template-columns: 1fr;
+  }
+
+  .Order-Summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Cart-Header {
+    padding: 15px;
+  }
+
+  .Brand {
+    font-size: 19px;
+  }
+
+  .Continue-Link {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .Cart-Container {
+    margin: 25px auto;
+    padding: 0 12px;
+  }
+
+  .Cart-Container h1 {
+    font-size: 27px;
+  }
+
+  .Cart-Item {
+    grid-template-columns: 85px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .Cart-Item img {
+    width: 85px;
+    height: 100px;
+  }
+
+  .Item-Details h3 {
+    font-size: 16px;
+  }
+
+  .Order-Summary {
+    padding: 18px;
+  }
+}
